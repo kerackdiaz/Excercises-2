@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Graffity</title>
+</head>
+
+<body>
+    <main class="h-screen w-screen flex">
+        <div class="w-1/3 flex justify-center items-center">
+            <div class="flex h-5/6 w-11/12 border border-black justify-center">
+                <form id="myForm" class="flex flex-col flex-wrap justify-evenly items-center">
+                    <label class="w-1/3" for="textInput">Texto:</label>
+                    <input class="w-2/3" type="text" id="textInput" placeholder="Texto a mostrar">
+
+                    <label for="colorInput" class="w-1/3">Color:</label>
+                    <input type="color" id="colorInput" class="border border-black w-2/3">
+                    <div class="flex flex-wrap">
+                        <label class="w-1/3" for="graffitiRadio">Graffity</label>
+                        <input class="w-2/3 text-left" type="radio" id="graffitiRadio" name="style" value="graffiti">
+
+                        <label class="w-1/3" for="posterRadio">Poster</label>
+                        <input class="w-2/3" type="radio" id="posterRadio" name="style" value="poster">
+                    </div>
+                    <input type="submit" value="Enviar" class="bg-yellow-500 w-1/2 px-2 py-1 border-2 border-black">
+                </form>
+            </div>
+        </div>
+        <div id="wall" class="border border-black w-2/3 h-screen flex justify-center items-center">
+        </div>
+    </main>
+    <script src="./app.js"></script>
+</body>
+
+</html>
